@@ -1,0 +1,43 @@
+- name: MathTEC
+  repo: mathtec
+  summary: "A three-stage pipeline that corrects errors in mathematical text mixing prose with inline LaTeX, together with MathTEC-Bench, a synthetic benchmark of 500 English mathematical statements covering five error types: spelling, OCR symbol, OCR formula, variable and handwriting."
+  results:
+    - 92.4% char-F1 and 88.4% sentence accuracy on MathTEC-Bench
+    - +3.1 char-F1 and +3.4 sentence accuracy over the single-prompt baseline
+    - Best setup combines six-prompt detection, a three-agent debate, a diff audit and a MathJax render gate
+    - Headline numbers verify offline in seconds, with no API key and no GPU
+  stack: Python, LLM APIs, MathJax
+  links:
+    - label: Code
+      url: https://github.com/mikessslx/mathtec
+    - label: Paper (ICCCS 2026)
+      url: https://doi.org/10.1109/ICCCS69761.2026.11613421
+
+- name: MathCorrector
+  repo: mathcorrector
+  summary: "A QLoRA-fine-tuned Qwen2.5-Math-7B-Instruct that minimally repairs terminology, notation, formula and logical errors in English mathematical text interleaved with LaTeX. It is trained on MathTEC-Bench and fits on an 8 GB laptop GPU through 4-bit NF4 quantization and gradient checkpointing."
+  results:
+    - F0.5 = 0.958, exact match = 0.900 and CER = 0.0014 on MathTEC-Bench
+    - F0.5 = 0.971 in the LoRA rank-32 ablation
+    - Released predictions re-score with the Python standard library alone
+  stack: Python, PyTorch, Hugging Face Transformers, PEFT, bitsandbytes
+  links:
+    - label: Code
+      url: https://github.com/mikessslx/mathcorrector
+    - label: Paper (CAMMIC 2026)
+      url: https://doi.org/10.1145/3817124.3817199
+
+- name: Knot Studio
+  repo: knot-studio
+  summary: "Interactive demo and research code for distinguishing prime knots using quandle coloring and quandle 2-cocycle invariants. Draw or paste a knot diagram, and the app identifies it by its coloring signature."
+  results:
+    - All 84 prime knots with crossing number less than 10 evaluated against 2,947 candidate quandles
+    - Coloring solvers by pruned depth-first search, Gaussian elimination over prime fields and Smith normal form over ℤ<sub>n</sub>
+    - Quandle selection solved as minimum set cover by integer programming, giving a minimum coloring set of 14 quandles and a cocycle-refined set of 9
+    - Only the pairs (7<sub>4</sub>, 9<sub>2</sub>) and (8<sub>14</sub>, 9<sub>8</sub>) remain unresolved
+  stack: Python, Flask, OR-Tools, Docker
+  links:
+    - label: Live demo
+      url: https://knot.cc.cd
+    - label: Code
+      url: https://github.com/mikessslx/knot-studio

@@ -1,9 +1,22 @@
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
+- jekyll-seo-tag
 
 title: Xiang Li
-description: mikessslx.github.io
+tagline: Mathematics and computer science
+description: Mathematics and computer science undergraduate at GTIIT and the Technion, working on language models for mathematical text and computational knot theory.
+url: https://mikessslx.github.io
+lang: en-US
+
+author: Xiang Li
+github_username: mikessslx
 
 show_downloads: false
 google_analytics: # UA-XXXXX-X
+
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+- vendor

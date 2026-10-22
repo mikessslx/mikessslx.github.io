@@ -1,0 +1,11 @@
+- area: Mathematics and algorithms
+  items: Mathematical modeling, statistical analysis, machine learning, computational experimentation
+
+- area: Programming
+  items: Python (NumPy, SciPy, Matplotlib, pandas, PyTorch, Hugging Face Transformers), C, Java, assembly
+
+- area: Machine learning workflow
+  items: Data cleaning, model training and evaluation, experiment automation, visualization
+
+- area: Tools
+  items: Linux (Ubuntu), Git, LaTeX, pytest, SAS Visual Analytics, Excel

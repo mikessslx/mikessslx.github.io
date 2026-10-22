@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<p class="lede">I am Xiang Li, an undergraduate at Guangdong Technion - Israel Institute of Technology, studying for a GTIIT B.Sc. in Mathematics and Applied Mathematics and a Technion bachelor's degree in Mathematics with Computer Science. My projects sit where the two meet: teaching language models to correct mathematical text, and using algebra and optimization to tell knots apart.</p>
+
+<h2 id="education">Education</h2>
+
+<div class="education">
+  <h3>Guangdong Technion - Israel Institute of Technology</h3>
+  <p class="where">Shantou, China, Aug 2023 – Jul 2027 (expected)</p>
+  <ul>
+    <li>GTIIT Bachelor of Science in Mathematics and Applied Mathematics</li>
+    <li>Technion Bachelor's Degree in Mathematics with Computer Science</li>
+  </ul>
+  <p>Medium of instruction: English</p>
+  <p><strong>Relevant Coursework:</strong> Calculus I–III, Linear Algebra, Systems Programming, Probability, Data Structures, Combinatorial Algorithms, Natural Language Processing, Numerical Analysis, Applied Mathematics</p>
+</div>
+
+<h2 id="publications">Publications</h2>
+
+<ol class="publications">
+  {% for pub in site.data.publications %}
+  <li>
+    <span class="pub-title">{{ pub.title }}</span>
+    <span class="pub-authors">{{ pub.authors }}</span>
+    <span class="pub-venue">{{ pub.venue }}</span>
+    <span class="links"><a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a> <a href="{{ pub.code }}">Code</a></span>
+  </li>
+  {% endfor %}
+</ol>
+
+<h2 id="projects">Projects</h2>
+
+{% for p in site.data.projects %}
+<article class="project">
+  <h3>{{ p.name }}</h3>
+  <p class="repo"><a href="https://github.com/{{ site.github_username }}/{{ p.repo }}">{{ site.github_username }}/{{ p.repo }}</a></p>
+  <p>{{ p.summary }}</p>
+  <ul class="results">
+    {% for r in p.results %}<li>{{ r }}</li>
+    {% endfor %}
+  </ul>
+  <p class="stack">Built with {{ p.stack }}</p>
+  <p class="links">
+    {% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>
+    {% endfor %}
+  </p>
+</article>
+{% endfor %}
+
+<h2 id="skills">Technical skills</h2>
+
+<dl class="skills">
+  {% for s in site.data.skills %}
+  <dt>{{ s.area }}</dt>
+  <dd>{{ s.items }}</dd>
+  {% endfor %}
+</dl>
