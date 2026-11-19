@@ -1,0 +1,11 @@
+- title: "MathTEC: A Multi-Agent Framework for Mathematical Text Error Correction"
+  authors: Xiang Li
+  venue: in Proc. 2026 11th Int. Conf. on Computer and Communication Systems (ICCCS), IEEE, 2026, pp. 1154–1159
+  doi: 10.1109/ICCCS69761.2026.11613421
+  code: https://github.com/mikessslx/mathtec
+
+- title: Specializing Small Language Models for Mathematical Error Correction via Parameter-Efficient Fine-Tuning
+  authors: Xiang Li
+  venue: in Proc. 2026 6th Int. Conf. on Applied Mathematics, Modelling and Intelligent Computing (CAMMIC), ACM, 2026, pp. 485–489
+  doi: 10.1145/3817124.3817199
+  code: https://github.com/mikessslx/mathcorrector
